@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kore Automations | Process Optimization & Custom Software</title>
+  <link rel="icon" type="image/png" href="PLACAS.jpg">
+  
+  <!-- Fuente Google: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="LOGO.jpg" alt="Kore Automations Logo" class="logo-img">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#soluciones" class="nav-link">Soluciones</a>
+        <a href="#problematica" class="nav-link">Beneficios</a>
+        <a href="#metodologia" class="nav-link">Metodología</a>
+        <a href="#contacto" class="btn btn-secondary nav-btn">Contacto</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Ingeniería de Software & RPA Empresarial
+      </div>
+      <h1 class="hero-title">Optimizamos y automatizamos los procesos operativos de tu empresa</h1>
+      <p class="hero-subtitle">
+        Desarrollamos motores de conciliación, bots de extracción masiva de datos y software a la medida para eliminar tareas manuales y garantizar cero margen de error.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Solicitar Diagnóstico Operativo</a>
+        <a href="#soluciones" class="btn btn-outline">Ver Demos en Vivo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA / PAIN POINTS -->
+  <section class="problem-section" id="problematica">
+    <div class="container">
+      <div class="section-header">
+        <h2>Eliminamos la fricción manual en tu gestión diaria</h2>
+        <p>Diseñamos arquitectura de software que resuelve los problemas operativos más comunes.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Carga Manual de Datos</h3>
+          <p>Corta el tiempo perdido ingresando o cruzando información en hojas de cálculo desordenadas.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Riesgo de Error Humano</h3>
+          <p>Garantiza 100% de precisión en conciliaciones complejas, cálculo de diferidos y devengados.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Sistemas Desconectados</h3>
+          <p>Conectamos tus bases de datos locales con portales gubernamentales o tributarios automáticamente.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Reportes Tardíos</h3>
+          <p>Obtén información estructurada y lista para la toma de decisiones gerenciales en segundos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÓDULO DE SOLUCIONES INTERACTIVO -->
+  <section class="solutions-section" id="soluciones">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nuestras Soluciones en Acción</h2>
+        <p>Selecciona un módulo para visualizar su arquitectura, impacto y demostración en vivo.</p>
+      </div>
+
+      <div class="solutions-wrapper">
+        <!-- Lista de Selección -->
+        <div class="solutions-list">
+          <button class="solution-btn active" data-target="bot-sunat">
+            <span class="btn-icon">🤖</span>
+            <div class="btn-text">
+              <strong>BOT SUNAT & RPA</strong>
+              <small>Extracción de comprobantes</small>
+            </div>
+          </button>
+
+          <button class="solution-btn" data-target="conciliacion">
+            <span class="btn-icon">📊</span>
+            <div class="btn-text">
+              <strong>Motor de Conciliación</strong>
+              <small>Auditoría y cruce de datos</small>
+            </div>
+          </button>
+
+          <button class="solution-btn" data-target="devengados">
+            <span class="btn-icon">⚙️</span>
+            <div class="btn-text">
+              <strong>Cálculos Financieros</strong>
+              <small>Diferidos y devengados</small>
+            </div>
+          </button>
+
+          <button class="solution-btn" data-target="custom-software">
+            <span class="btn-icon">💻</span>
+            <div class="btn-text">
+              <strong>Software a la Medida</strong>
+              <small>Flujos operativos integrados</small>
+            </div>
+          </button>
+        </div>
+
+        <!-- Panel Dinámico de Contenido -->
+        <div class="solution-display">
+          
+          <!-- Tab 1: Bot SUNAT -->
+          <div class="solution-panel active" id="bot-sunat">
+            <div class="panel-header">
+              <h3>BOT SUNAT & Extracción Robótica (RPA)</h3>
+              <p>Conexión, consulta y descarga autónoma de comprobantes tributarios e información masiva desde portales oficiales sin intervención humana.</p>
+              <div class="impact-badge">⚡ Impacto: Reducción del 95% en tiempo de descarga</div>
+            </div>
+            <div class="demo-container">
+              <div class="demo-placeholder">
+                <div class="play-icon">▶</div>
+                <p><strong>Demo: Ejecución del Bot SUNAT</strong></p>
+                <small>( &lt;video&gt; o iframe de YouTube/Vimeo)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Conciliación -->
+          <div class="solution-panel" id="conciliacion">
+            <div class="panel-header">
+              <h3>Motor de Conciliación Masiva de Datos</h3>
+              <p>Procesamiento e integración automática de archivos de facturación, extractos bancarios y registros contables desordenados.</p>
+              <div class="impact-badge">⚡ Impacto: Cruces complejos procesados en 3 segundos</div>
+            </div>
+            <div class="demo-container">
+              <div class="demo-placeholder">
+                <div class="play-icon">▶</div>
+                <p><strong>Demo: Conciliación en Tiempo Real</strong></p>
+                <small>(Reemplaza esta área con tu video demostrativo)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Devengados -->
+          <div class="solution-panel" id="devengados">
+            <div class="panel-header">
+              <h3>Cálculo Financiero Automatizado</h3>
+              <p>Algoritmos diseñados para la aplicación automática de reglas de negocio contables, cortes periódicos y clasificación de partidas dinámicas.</p>
+              <div class="impact-badge">⚡ Impacto: 100% de precisión en reportabilidad</div>
+            </div>
+            <div class="demo-container">
+              <div class="demo-placeholder">
+                <div class="play-icon">▶</div>
+                <p><strong>Demo: Motor de Reglas Financieras</strong></p>
+                <small>(Reemplaza esta área con tu video demostrativo)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Software a la medida -->
+          <div class="solution-panel" id="custom-software">
+            <div class="panel-header">
+              <h3>Sistemas Operativos a la Medida</h3>
+              <p>Desarrollo de herramientas y scripts creados bajo la arquitectura de tu empresa para conectar tus flujos internos sin fisuras.</p>
+              <div class="impact-badge">⚡ Impacto: Eliminación total de cuellos de botella</div>
+            </div>
+            <div class="demo-container">
+              <div class="demo-placeholder">
+                <div class="play-icon">▶</div>
+                <p><strong>Demo: Flujo Completo Integrado</strong></p>
+                <small>(Reemplaza esta área con tu video demostrativo)</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section class="methodology-section" id="metodologia">
+    <div class="container">
+      <div class="section-header">
+        <h2>Metodología de Trabajo</h2>
+        <p>Un proceso estructurado para garantizar la máxima seguridad e integración técnica.</p>
+      </div>
+
+      <div class="grid grid-4 steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h4>Diagnóstico Operativo</h4>
+          <p>Mapeamos el flujo de trabajo manual actual e identificamos cuellos de botella.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h4>Arquitectura & Lógica</h4>
+          <p>Definimos las reglas de negocio, estructura de datos y seguridad requerida.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h4>Desarrollo & Pruebas</h4>
+          <p>Construimos la solución en Python y validamos la precisión con datos reales.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h4>Despliegue & Soporte</h4>
+          <p>Implementamos el sistema y capacitamos a tu equipo operativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="casos-de-exito" class="casos-section">
+  <div class="container">
+    <h2 class="section-title">Casos de Éxito & Automatizaciones</h2>
+    <p class="section-subtitle">Casos reales de optimización de procesos operativos y financieros.</p>
+
+    <div class="case-card">
+      <div class="case-video">
+        <video controls poster="assets/thumbnail-cobranzas.png" style="width:100%; border-radius: 8px;">
+          <source src="assets/demo-cobranzas.mp4" type="video/mp4">
+          Tu navegador no soporta reproducción de video.
+        </video>
+      </div>
+
+      <div class="case-info">
+        <span class="badge">Finanzas & Cobranzas</span>
+        <h3>Conciliación Masiva de Facturas en Python & Excel</h3>
+        <p class="case-description">
+          Automatización desarrollada para procesar más de 500 comprobantes de pago, calcular días de mora e inyectar un reporte consolidado por cliente en el mismo archivo Excel.
+        </p>
+        
+        <ul class="case-metrics">
+          <li><strong>Tiempo de ejecución:</strong> Reducción de 45 min a &lt; 1 segundo.</li>
+          <li><strong>Impacto:</strong> Cero margen de error manual y priorización de cobranza diaria.</li>
+          <li><strong>Tecnologías:</strong> Python, Pandas, OpenPyXL, Windows Batch (.BAT).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <section class="contact-section" id="contacto">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h2>Transforma la operación de tu empresa hoy</h2>
+        <p>Déjanos tus datos de contacto y agendaremos una sesión técnica para evaluar el proceso que deseas optimizar.</p>
+        
+        <div class="trust-features">
+          <div class="trust-item">
+            🔒 <strong>Acuerdo de Confidencialidad (NDA):</strong> Protección total de la información de tu empresa.
+          </div>
+          <div class="trust-item">
+            💻 <strong>Código Robusto:</strong> Soluciones desarrolladas con arquitectura escalable y mantenible.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" required placeholder="Ej. Juan Pérez">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Corporativo</label>
+            <input type="email" id="email" required placeholder="nombre@empresa.com">
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa / Cargo</label>
+            <input type="text" id="company" required placeholder="Ej. Gerente de Finanzas">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Proceso a Automatizar</label>
+            <textarea id="message" rows="4" required placeholder="Describe brevemente el proceso manual o flujo que deseas mejorar..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Solicitar Diagnóstico Técnico</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-name">KORE</span>
+        <span class="brand-sub">AUTOMATIONS</span>
+        <p>Process Optimization & Custom Software</p>
+      </div>
+      <p class="copyright">&copy; 2026 Kore Automations. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
