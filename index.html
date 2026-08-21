@@ -26,6 +26,7 @@
         <a href="#soluciones" class="nav-link">Soluciones</a>
         <a href="#problematica" class="nav-link">Beneficios</a>
         <a href="#metodologia" class="nav-link">Metodología</a>
+        <a href="#casos-de-exito" class="nav-link">Casos de Éxito</a>
         <a href="#contacto" class="btn btn-secondary nav-btn">Contacto</a>
       </nav>
 
@@ -46,7 +47,7 @@
       </div>
       <h1 class="hero-title">Optimizamos y automatizamos los procesos operativos de tu empresa</h1>
       <p class="hero-subtitle">
-        Desarrollamos motores de conciliación, bots de extracción masiva de datos y software a la medida para eliminar tareas manuales y garantizar cero margen de error.
+        Desarrollamos motores de conciliación, bots de extracción masiva de datos e integración de sistemas a la medida para eliminar tareas manuales y garantizar cero margen de error.
       </p>
       <div class="hero-actions">
         <a href="#contacto" class="btn btn-primary">Solicitar Diagnóstico Operativo</a>
@@ -77,7 +78,7 @@
         <div class="card">
           <div class="card-icon">🔄</div>
           <h3>Sistemas Desconectados</h3>
-          <p>Conectamos tus bases de datos locales con portales gubernamentales o tributarios automáticamente.</p>
+          <p>Conectamos tus bases de datos locales con portales web o sistemas ERP automáticamente.</p>
         </div>
         <div class="card">
           <div class="card-icon">📈</div>
@@ -99,35 +100,35 @@
       <div class="solutions-wrapper">
         <!-- Lista de Selección -->
         <div class="solutions-list">
-          <button class="solution-btn active" data-target="bot-sunat">
-            <span class="btn-icon">🤖</span>
+          <button class="solution-btn" data-target="bot-sunat">
+            <span class="btn-icon">🌐</span>
             <div class="btn-text">
-              <strong>BOT SUNAT & RPA</strong>
-              <small>Extracción de comprobantes</small>
+              <strong>Extracción & RPA Web</strong>
+              <small>Bot Scraping de datos</small>
             </div>
           </button>
 
-          <button class="solution-btn" data-target="conciliacion">
+          <button class="solution-btn active" data-target="conciliacion">
             <span class="btn-icon">📊</span>
             <div class="btn-text">
-              <strong>Motor de Conciliación</strong>
-              <small>Auditoría y cruce de datos</small>
+              <strong>Conciliación de Cobranzas</strong>
+              <small>Auditoría y cruce masivo</small>
             </div>
           </button>
 
           <button class="solution-btn" data-target="devengados">
-            <span class="btn-icon">⚙️</span>
+            <span class="btn-icon">📈</span>
             <div class="btn-text">
-              <strong>Cálculos Financieros</strong>
-              <small>Diferidos y devengados</small>
+              <strong>Alertas & Reportes Financieros</strong>
+              <small>Envío a Email / Telegram</small>
             </div>
           </button>
 
           <button class="solution-btn" data-target="custom-software">
             <span class="btn-icon">💻</span>
             <div class="btn-text">
-              <strong>Software a la Medida</strong>
-              <small>Flujos operativos integrados</small>
+              <strong>Integración de Sistemas & APIs</strong>
+              <small>Conexión Web, ERP y Base de Datos</small>
             </div>
           </button>
         </div>
@@ -135,66 +136,65 @@
         <!-- Panel Dinámico de Contenido -->
         <div class="solution-display">
           
-          <!-- Tab 1: Bot SUNAT -->
-          <div class="solution-panel active" id="bot-sunat">
+          <!-- Tab 1: Extracción & RPA Web -->
+          <div class="solution-panel" id="bot-sunat">
             <div class="panel-header">
-              <h3>BOT SUNAT & Extracción Robótica (RPA)</h3>
-              <p>Conexión, consulta y descarga autónoma de comprobantes tributarios e información masiva desde portales oficiales sin intervención humana.</p>
+              <h3>Extracción & RPA Web (Bot Scraping)</h3>
+              <p>Conexión, consulta y descarga autónoma de datos e información masiva desde portales web oficiales directamente a Excel o bases de datos sin intervención humana.</p>
               <div class="impact-badge">⚡ Impacto: Reducción del 95% en tiempo de descarga</div>
             </div>
             <div class="demo-container">
               <div class="demo-placeholder">
-                <div class="play-icon">▶</div>
-                <p><strong>Demo: Ejecución del Bot SUNAT</strong></p>
-                <small>( &lt;video&gt; o iframe de YouTube/Vimeo)</small>
+                <div class="play-icon">📹</div>
+                <p><strong>Demo: Extracción y Scraping Web</strong></p>
+                <small>(Próximamente demo en vivo en preparación)</small>
               </div>
             </div>
           </div>
 
-          <!-- Tab 2: Conciliación -->
-          <div class="solution-panel" id="conciliacion">
+          <!-- Tab 2: Conciliación (DEMO ACTIVA) -->
+          <div class="solution-panel active" id="conciliacion">
             <div class="panel-header">
-              <h3>Motor de Conciliación Masiva de Datos</h3>
-              <p>Procesamiento e integración automática de archivos de facturación, extractos bancarios y registros contables desordenados.</p>
-              <div class="impact-badge">⚡ Impacto: Cruces complejos procesados en 3 segundos</div>
+              <h3>Motor de Conciliación Masiva de Cobranzas</h3>
+              <p>Procesamiento e integración automática de +500 facturas, cálculo de días de mora e inyección del reporte consolidado en el archivo Excel original en menos de 1 segundo.</p>
+              <div class="impact-badge">⚡ Impacto: Cruces complejos procesados en &lt; 1 segundo</div>
             </div>
             <div class="demo-container">
-              <div class="demo-placeholder">
-                <div class="play-icon">▶</div>
-                <p><strong>Demo: Conciliación en Tiempo Real</strong></p>
-                <small>(Reemplaza esta área con tu video demostrativo)</small>
-              </div>
+              <video controls poster="assets/thumbnail-cobranzas.png" style="width:100%; border-radius: 8px;">
+                <source src="assets/demo-cobranzas.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video.
+              </video>
             </div>
           </div>
 
-          <!-- Tab 3: Devengados -->
+          <!-- Tab 3: Reportes Financieros -->
           <div class="solution-panel" id="devengados">
             <div class="panel-header">
-              <h3>Cálculo Financiero Automatizado</h3>
-              <p>Algoritmos diseñados para la aplicación automática de reglas de negocio contables, cortes periódicos y clasificación de partidas dinámicas.</p>
-              <div class="impact-badge">⚡ Impacto: 100% de precisión en reportabilidad</div>
+              <h3>Proyecciones & Alertas Financieras Automáticas</h3>
+              <p>Algoritmos diseñados para la consolidación de presupuestos, detección de morosidad y envío automático de reportes ejecutivos por Correo Electrónico o Telegram.</p>
+              <div class="impact-badge">⚡ Impacto: 100% de precisión y alertas gerenciales al instante</div>
             </div>
             <div class="demo-container">
               <div class="demo-placeholder">
-                <div class="play-icon">▶</div>
-                <p><strong>Demo: Motor de Reglas Financieras</strong></p>
-                <small>(Reemplaza esta área con tu video demostrativo)</small>
+                <div class="play-icon">📹</div>
+                <p><strong>Demo: Motor de Alertas & Reportes</strong></p>
+                <small>(Próximamente demo en vivo en preparación)</small>
               </div>
             </div>
           </div>
 
-          <!-- Tab 4: Software a la medida -->
+          <!-- Tab 4: Integración de Sistemas -->
           <div class="solution-panel" id="custom-software">
             <div class="panel-header">
-              <h3>Sistemas Operativos a la Medida</h3>
-              <p>Desarrollo de herramientas y scripts creados bajo la arquitectura de tu empresa para conectar tus flujos internos sin fisuras.</p>
+              <h3>Integración de Sistemas & APIs</h3>
+              <p>Desarrollo de aplicaciones web y backend conectando formularios, bases de datos PostgreSQL y sistemas ERP para unificar tus flujos de trabajo.</p>
               <div class="impact-badge">⚡ Impacto: Eliminación total de cuellos de botella</div>
             </div>
             <div class="demo-container">
               <div class="demo-placeholder">
-                <div class="play-icon">▶</div>
-                <p><strong>Demo: Flujo Completo Integrado</strong></p>
-                <small>(Reemplaza esta área con tu video demostrativo)</small>
+                <div class="play-icon">📹</div>
+                <p><strong>Demo: Flujo de Integración API / Web</strong></p>
+                <small>(Próximamente demo en vivo en preparación)</small>
               </div>
             </div>
           </div>
@@ -237,35 +237,38 @@
     </div>
   </section>
 
+  <!-- CASOS DE ÉXITO -->
   <section id="casos-de-exito" class="casos-section">
-  <div class="container">
-    <h2 class="section-title">Casos de Éxito & Automatizaciones</h2>
-    <p class="section-subtitle">Casos reales de optimización de procesos operativos y financieros.</p>
-
-    <div class="case-card">
-      <div class="case-video">
-        <video controls poster="assets/thumbnail-cobranzas.png" style="width:100%; border-radius: 8px;">
-          <source src="assets/demo-cobranzas.mp4" type="video/mp4">
-          Tu navegador no soporta reproducción de video.
-        </video>
+    <div class="container">
+      <div class="section-header">
+        <h2>Casos de Éxito & Automatizaciones</h2>
+        <p>Casos reales de optimización de procesos operativos y financieros.</p>
       </div>
 
-      <div class="case-info">
-        <span class="badge">Finanzas & Cobranzas</span>
-        <h3>Conciliación Masiva de Facturas en Python & Excel</h3>
-        <p class="case-description">
-          Automatización desarrollada para procesar más de 500 comprobantes de pago, calcular días de mora e inyectar un reporte consolidado por cliente en el mismo archivo Excel.
-        </p>
-        
-        <ul class="case-metrics">
-          <li><strong>Tiempo de ejecución:</strong> Reducción de 45 min a &lt; 1 segundo.</li>
-          <li><strong>Impacto:</strong> Cero margen de error manual y priorización de cobranza diaria.</li>
-          <li><strong>Tecnologías:</strong> Python, Pandas, OpenPyXL, Windows Batch (.BAT).</li>
-        </ul>
+      <div class="case-card">
+        <div class="case-video">
+          <video controls poster="assets/thumbnail-cobranzas.png" style="width:100%; border-radius: 8px;">
+            <source src="assets/demo-cobranzas.mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de video.
+          </video>
+        </div>
+
+        <div class="case-info">
+          <span class="badge">Finanzas & Cobranzas</span>
+          <h3>Conciliación Masiva de Facturas en Python & Excel</h3>
+          <p class="case-description">
+            Automatización desarrollada para procesar más de 500 comprobantes de pago, calcular días de mora e inyectar un reporte consolidado por cliente en el mismo archivo Excel.
+          </p>
+          
+          <ul class="case-metrics">
+            <li><strong>Tiempo de ejecución:</strong> Reducción de 45 min a &lt; 1 segundo.</li>
+            <li><strong>Impacto:</strong> Cero margen de error manual y priorización de cobranza diaria.</li>
+            <li><strong>Tecnologías:</strong> Python, Pandas, OpenPyXL, Windows Batch (.BAT).</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- FORMULARIO DE CONTACTO -->
   <section class="contact-section" id="contacto">
