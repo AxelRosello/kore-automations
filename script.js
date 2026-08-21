@@ -102,4 +102,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // LÓGICA DE SUBMÓDULOS E INTERACTIVIDAD DE VIDEO
+document.addEventListener('DOMContentLoaded', () => {
+  const submoduleCards = document.querySelectorAll('.submodule-card');
+  const mainVideo = document.getElementById('mainDesktopVideo');
+  const videoSource = document.getElementById('desktopVideoSource');
+  const videoTitle = document.getElementById('desktopVideoTitle');
+  const videoDesc = document.getElementById('desktopVideoDesc');
+
+  submoduleCards.forEach(card => {
+    card.addEventListener('click', () => {
+      // Remover activo de otros submódulos
+      submoduleCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      // Actualizar reproductor en PC
+      const newVideo = card.getAttribute('data-video');
+      const newTitle = card.getAttribute('data-title');
+      const newDesc = card.getAttribute('data-desc');
+
+      if (mainVideo && videoSource) {
+        videoSource.src = newVideo;
+        videoTitle.textContent = newTitle;
+        videoDesc.textContent = newDesc;
+        mainVideo.load();
+      }
+    });
+  });
+});
+
+// FUNCIONES PARA VENTANA FLOTANTE EN MÓVIL (MODAL)
+function openVideoModal(videoSrc, title) {
+  const modal = document.getElementById('videoModal');
+  const modalPlayer = document.getElementById('modalVideoPlayer');
+  const modalSource = document.getElementById('modalVideoSource');
+  const modalTitle = document.getElementById('modalVideoTitle');
+
+  if (modal && modalPlayer) {
+    modalSource.src = videoSrc;
+    modalTitle.textContent = title;
+    modalPlayer.load();
+    modal.style.display = 'flex';
+  }
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const modalPlayer = document.getElementById('modalVideoPlayer');
+  if (modal) {
+    modal.style.display = 'none';
+    if (modalPlayer) modalPlayer.pause();
+  }
+}
+
+document.getElementById('closeModalBtn')?.addEventListener('click', closeVideoModal);
+
 });

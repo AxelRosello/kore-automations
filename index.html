@@ -127,194 +127,93 @@
     </div>
   </section>
 
-  <!-- MÓDULO DE SOLUCIONES INTERACTIVO -->
+
+  <!-- MÓDULO DE SOLUCIONES INTERACTIVO (FUSIÓN ADAPTATIVA) -->
   <section class="solutions-section" id="soluciones">
     <div class="container">
       <div class="section-header">
         <h2>Nuestras Soluciones Especializadas</h2>
-        <p>Selecciona un módulo para desplegar su diagnóstico operativo, propuesta de valor y demostración.</p>
+        <p>Explora cada submódulo y visualiza su demostración técnica en tiempo real.</p>
       </div>
 
-      <div class="solutions-wrapper">
-        <!-- Selector Lateral Limpio de Módulos -->
-        <div class="solutions-list">
-          
-          <button class="solution-btn" data-target="modulo-1">
-            
-            <div class="btn-text">
-              <strong>Módulo 1: Gestión de Activos Críticos & Operaciones Mineras</strong>
-              <small>Equipos, Instrumentos & Partes de Campo</small>
-            </div>
-          </button>
+      <!-- BOTONES DE MÓDULOS PRINCIPALES -->
+      <div class="main-modules-tabs">
+        <button class="main-tab-btn active" data-module="mod-1">Módulo 1: Activos Críticos & Mina</button>
+        <button class="main-tab-btn" data-module="mod-2">Módulo 2: Conciliación & Finanzas</button>
+        <button class="main-tab-btn" data-module="mod-3">Módulo 3: Cadena de Suministros</button>
+        <button class="main-tab-btn" data-module="mod-4">Módulo 4: Integración & APIs</button>
+      </div>
 
-          <button class="solution-btn active" data-target="modulo-2">
-            
-            <div class="btn-text">
-              <strong>Módulo 2: Motor de Conciliación, Finanzas & Cobranzas Masivas</strong>
-              <small>Auditoría, Mora & Facturación (DEMO ACTIVA)</small>
-            </div>
-          </button>
-
-          <button class="solution-btn" data-target="modulo-3">
-            
-            <div class="btn-text">
-              <strong>Módulo 3: Cadena de Suministros, Viáticos & Control Logístico</strong>
-              <small>Combustible, Peajes, Stock & Almacén</small>
-            </div>
-          </button>
-
-          <button class="solution-btn" data-target="modulo-4">
-            
-            <div class="btn-text">
-              <strong>Módulo 4: Integración de Sistemas, APIs & Arquitectura de Software</strong>
-              <small>Conexión Web, ERP, Asistencia & Telegram</small>
-            </div>
-          </button>
-
+      <!-- PANEL DE MÓDULO (EJEMPLO MÓDULO 1) -->
+      <div class="module-content-panel active" id="mod-1">
+        <div class="module-intro">
+          <h3>Módulo 1: Gestión de Activos Críticos & Operaciones Mineras</h3>
+          <p><strong>❓ El Problema:</strong> Pérdida de horas en cuadrar partes de campo, horómetros o desfases en calibraciones.</p>
+          <p><strong>💡 Nuestra Solución:</strong> Algoritmos que procesan partes diarios y automatizan cobros por hora/turno sin errores.</p>
         </div>
 
-        <!-- Panel Dinámico de Contenido Desplegable -->
-        <div class="solution-display">
-          
-          <!-- TAB MÓDULO 1 -->
-          <div class="solution-panel" id="modulo-1">
-            <div class="panel-header">
-              <h3>Módulo 1: Gestión de Activos Críticos & Operaciones Mineras</h3>
-              
-              <div class="pain-box">
-                <p><strong>❓ ¿El Problema?</strong> ¿Gestionas alquileres de maquinaria o instrumentos de calibración y pierdes horas cuadrando partes de campo, horómetros o sufriendo por certificados vencidos?</p>
+        <div class="submodules-container">
+          <!-- LISTA DE SUBMÓDULOS -->
+          <div class="submodules-list">
+            <div class="submodule-card active" data-video="assets/demo-horometros.mp4" data-title="1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas" data-desc="Registro y cálculo automatizado de tarifas por hora o turno sin margen de error humano.">
+              <span class="sub-num">1.1</span>
+              <div class="sub-info">
+                <h4>Tracking de Horómetros & Tarifas</h4>
+                <p>Cálculo automático de alquileres y horas trabajadas.</p>
               </div>
-
-              <p class="solution-desc">
-                <strong>💡 Nuestra Solución Adaptable:</strong> Desarrollamos algoritmos que procesan partes diarios, automatizan el cobro exacto por hora de uso y envían alertas preventivas antes de que venza una calibración. Nos adaptamos 100% a la lógica de tu empresa.
-              </p>
-
-              <div class="submodules-list">
-                <h4>Submódulos Incluidos:</h4>
-                <ul>
-                  <li><strong>1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas:</strong> Registro y cálculo automatizado de tarifas por hora/turno sin errores.</li>
-                  <li><strong>1.2 Alertas de Vencimiento de Calibración & Mantenimiento:</strong> Notificaciones preventivas para evitar paradas en mina o planta.</li>
-                  <li><strong>1.3 Consolidación de Partes Diarios de Campo:</strong> Integración automática de reportes dispersos enviados por técnicos.</li>
-                </ul>
-              </div>
-
-              <div class="impact-badge">⚡ Impacto: Cero paradas no programadas y cobros por alquiler 100% exactos</div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-horometros.mp4', '1.1 Tracking de Horómetros & Tarifas')">▶ Ver Demo</button>
             </div>
 
-            <div class="demo-container">
-              <div class="demo-placeholder">
-                <div class="play-icon">📹</div>
-                <p><strong>Demo: Control Operativo de Flotas & Calibración</strong></p>
-                <small>(Próximamente demo en vivo en preparación)</small>
+            <div class="submodule-card" data-video="assets/demo-calibracion.mp4" data-title="1.2 Alertas de Vencimiento de Calibración & Mantenimiento" data-desc="Notificaciones preventivas automáticas para evitar paradas críticas en mina o planta.">
+              <span class="sub-num">1.2</span>
+              <div class="sub-info">
+                <h4>Alertas de Calibración & Mantenimiento</h4>
+                <p>Notificaciones preventivas de vencimiento de equipos.</p>
               </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-calibracion.mp4', '1.2 Alertas de Calibración & Mantenimiento')">▶ Ver Demo</button>
+            </div>
+
+            <div class="submodule-card" data-video="assets/demo-partes.mp4" data-title="1.3 Consolidación de Partes Diarios de Campo" data-desc="Integración e ingesta automática de reportes dispersos enviados por los técnicos de campo.">
+              <span class="sub-num">1.3</span>
+              <div class="sub-info">
+                <h4>Consolidación de Partes de Campo</h4>
+                <p>Digitalización e ingesta de partes diarios.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-partes.mp4', '1.3 Consolidación de Partes de Campo')">▶ Ver Demo</button>
             </div>
           </div>
 
-          <!-- TAB MÓDULO 2 (DEMO ACTIVA) -->
-          <div class="solution-panel active" id="modulo-2">
-            <div class="panel-header">
-              <h3>Módulo 2: Motor de Conciliación, Finanzas & Cobranzas Masivas</h3>
-              
-              <div class="pain-box">
-                <p><strong>❓ ¿El Problema?</strong> ¿Tu equipo contable pasa días cruzando cientos de facturas, extractos bancarios y calculando manualmente días de mora en hojas de Excel?</p>
-              </div>
-
-              <p class="solution-desc">
-                <strong>💡 Nuestra Solución Adaptable:</strong> Automatizamos el cruce masivo de +500 comprobantes, cálculo de mora y auditoría en menos de 1 segundo. Inyectamos el consolidado formateado dentro de tu propio archivo Excel mediante ejecutable en un clic.
-              </p>
-
-              <div class="submodules-list">
-                <h4>Submódulos Incluidos:</h4>
-                <ul>
-                  <li><strong>2.1 Cruce & Conciliación Masiva de Facturas:</strong> Procesamiento ultra rápido con inyección en Excel (.BAT).</li>
-                  <li><strong>2.2 Auditoría & Control de Detracciones y Retenciones:</strong> Validación de pagos en banco vs. cuentas contables.</li>
-                  <li><strong>2.3 Programación de Pagos a Proveedores & Telecrédito:</strong> Generación de archivos planos y prioridad de pagos.</li>
-                </ul>
-              </div>
-
-              <div class="impact-badge">⚡ Impacto: Cruces complejos procesados en &lt; 1 segundo con cero error</div>
-            </div>
-
-            <div class="demo-container">
-              <video controls poster="assets/thumbnail-cobranzas.png" style="width:100%; border-radius: 8px;">
-                <source src="assets/demo-cobranzas.mp4" type="video/mp4">
+          <!-- REPRODUCTOR INTERACTIVO EN PC (DESKTOP ONLY) -->
+          <div class="desktop-video-player desktop-only">
+            <div class="player-wrapper">
+              <h4 id="desktopVideoTitle">1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas</h4>
+              <video id="mainDesktopVideo" controls poster="assets/thumbnail-cobranzas.png">
+                <source id="desktopVideoSource" src="assets/demo-cobranzas.mp4" type="video/mp4">
                 Tu navegador no soporta reproducción de video.
               </video>
+              <p id="desktopVideoDesc">Registro y cálculo automatizado de tarifas por hora o turno sin margen de error humano.</p>
+              <a href="#contacto" class="btn btn-primary btn-sm">Solicitar Diagnóstico de este Submódulo</a>
             </div>
           </div>
-
-          <!-- TAB MÓDULO 3 -->
-          <div class="solution-panel" id="modulo-3">
-            <div class="panel-header">
-              <h3>Módulo 3: Cadena de Suministros, Viáticos & Control Logístico</h3>
-              
-              <div class="pain-box">
-                <p><strong>❓ ¿El Problema?</strong> ¿Tienes sobrecostos no identificados en combustible, fugas de dinero en viáticos de cuadrillas o desabastecimiento inesperado en almacén?</p>
-              </div>
-
-              <p class="solution-desc">
-                <strong>💡 Nuestra Solución Adaptable:</strong> Construimos motores de auditoría que cruzan gastos de ruta contra itinerarios reales y monitorean el stock crítico para emitir alertas o repuestos en automático antes de que falte un insumo.
-              </p>
-
-              <div class="submodules-list">
-                <h4>Submódulos Incluidos:</h4>
-                <ul>
-                  <li><strong>3.1 Control de Stock Mínimo & Reposición Automática:</strong> Alertas inmediatas al llegar al punto crítico de insumos.</li>
-                  <li><strong>3.2 Auditoría de Viáticos, Peajes & Combustible de Cuadrillas:</strong> Detección automática de desviaciones o sobrecostos en ruta.</li>
-                  <li><strong>3.3 Cruce de Recepción de Almacén vs. Orden de Compra:</strong> Validación de guías de remisión recibidas contra pedidos.</li>
-                </ul>
-              </div>
-
-              <div class="impact-badge">⚡ Impacto: Control total sobre los costos operativos de campo y logística</div>
-            </div>
-
-            <div class="demo-container">
-              <div class="demo-placeholder">
-                <div class="play-icon">📹</div>
-                <p><strong>Demo: Auditoría Logística & Control de Gastos</strong></p>
-                <small>(Próximamente demo en vivo en preparación)</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB MÓDULO 4 -->
-          <div class="solution-panel" id="modulo-4">
-            <div class="panel-header">
-              <h3>Módulo 4: Integración de Sistemas, APIs & Arquitectura de Software</h3>
-              
-              <div class="pain-box">
-                <p><strong>❓ ¿El Problema?</strong> ¿Trabajas con sistemas desconectados (Excel, ERP, portales web) y tienes que copiar y pegar información repetitiva todos los días?</p>
-              </div>
-
-              <p class="solution-desc">
-                <strong>💡 Nuestra Solución Adaptable:</strong> Interconectamos tus bases de datos, plataformas ERP (como Odoo) y portales web mediante scripts y APIs a la medida. Creamos aplicaciones y dashboards gerenciales automáticos directos a tu correo o Telegram.
-              </p>
-
-              <div class="submodules-list">
-                <h4>Submódulos Incluidos:</h4>
-                <ul>
-                  <li><strong>4.1 Conexión de Portales Web, ERP (Odoo) & Bases de Datos:</strong> Flujo unificado sin doble digitación manual.</li>
-                  <li><strong>4.2 Consolidación de Asistencia & Horas Extra de Personal:</strong> Cálculo automatizado sobre marcaciones biométricas.</li>
-                  <li><strong>4.3 Dashboards & Alertas Gerenciales a Email / Telegram:</strong> Reportes ejecutivos consolidados en tiempo real.</li>
-                </ul>
-              </div>
-
-              <div class="impact-badge">⚡ Impacto: Eliminación del 100% de la carga operativa por copia y pega</div>
-            </div>
-
-            <div class="demo-container">
-              <div class="demo-placeholder">
-                <div class="play-icon">📹</div>
-                <p><strong>Demo: Conexión API / ERP & Bot de Telegram</strong></p>
-                <small>(Próximamente demo en vivo en preparación)</small>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
   </section>
+
+  <!-- VENTANA FLOTANTE / MODAL PARA CELULARES (MOBILE ONLY) -->
+  <div class="video-modal-overlay" id="videoModal">
+    <div class="video-modal-content">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <h4 id="modalVideoTitle">Título de la Demo</h4>
+      <div class="modal-video-wrapper">
+        <video id="modalVideoPlayer" controls>
+          <source id="modalVideoSource" src="" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+      </div>
+      <a href="#contacto" class="btn btn-primary btn-full" onclick="closeVideoModal()">Agendar Demo Completa</a>
+    </div>
+  </div>
 
   <!-- METODOLOGÍA -->
   <section class="methodology-section" id="metodologia">
