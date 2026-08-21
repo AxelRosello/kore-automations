@@ -129,7 +129,7 @@
 
 
   <!-- MÓDULO DE SOLUCIONES INTERACTIVO (FUSIÓN ADAPTATIVA) -->
-  <section class="solutions-section" id="soluciones">
+   <section class="solutions-section" id="soluciones">
     <div class="container">
       <div class="section-header">
         <h2>Nuestras Soluciones Especializadas</h2>
@@ -144,7 +144,7 @@
         <button class="main-tab-btn" data-module="mod-4">Módulo 4: Integración & APIs</button>
       </div>
 
-      <!-- PANEL DE MÓDULO (EJEMPLO MÓDULO 1) -->
+      <!-- PANEL MÓDULO 1 -->
       <div class="module-content-panel active" id="mod-1">
         <div class="module-intro">
           <h3>Módulo 1: Gestión de Activos Críticos & Operaciones Mineras</h3>
@@ -153,7 +153,6 @@
         </div>
 
         <div class="submodules-container">
-          <!-- LISTA DE SUBMÓDULOS -->
           <div class="submodules-list">
             <div class="submodule-card active" data-video="assets/demo-horometros.mp4" data-title="1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas" data-desc="Registro y cálculo automatizado de tarifas por hora o turno sin margen de error humano.">
               <span class="sub-num">1.1</span>
@@ -183,22 +182,148 @@
             </div>
           </div>
 
-          <!-- REPRODUCTOR INTERACTIVO EN PC (DESKTOP ONLY) -->
           <div class="desktop-video-player desktop-only">
             <div class="player-wrapper">
-              <h4 id="desktopVideoTitle">1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas</h4>
-              <video id="mainDesktopVideo" controls poster="assets/thumbnail-cobranzas.png">
-                <source id="desktopVideoSource" src="assets/demo-cobranzas.mp4" type="video/mp4">
-                Tu navegador no soporta reproducción de video.
+              <h4 class="desktopVideoTitle">1.1 Tracking de Horómetros, Uso de Instrumentos & Tarifas</h4>
+              <video class="mainDesktopVideo" controls>
+                <source class="desktopVideoSource" src="assets/demo-horometros.mp4" type="video/mp4">
               </video>
-              <p id="desktopVideoDesc">Registro y cálculo automatizado de tarifas por hora o turno sin margen de error humano.</p>
+              <p class="desktopVideoDesc">Registro y cálculo automatizado de tarifas por hora o turno sin margen de error humano.</p>
               <a href="#contacto" class="btn btn-primary btn-sm">Solicitar Diagnóstico de este Submódulo</a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- PANEL MÓDULO 2 -->
+      <div class="module-content-panel" id="mod-2">
+        <div class="module-intro">
+          <h3>Módulo 2: Motor de Conciliación, Finanzas & Cobranzas Masivas</h3>
+          <p><strong>❓ El Problema:</strong> Cuentas por cobrar desfasadas, extractos bancarios no conciliados e inconsistencia en reportes.</p>
+          <p><strong>💡 Nuestra Solución:</strong> Automatización end-to-end de conciliaciones bancarias y gestión preventiva de cobranzas.</p>
+        </div>
+
+        <div class="submodules-container">
+          <div class="submodules-list">
+            <div class="submodule-card active" data-video="assets/demo-cobranzas.mp4" data-title="2.1 Motor Bot de Conciliación Bancaria Automatic" data-desc="Cruce inteligente entre extractos bancarios y registros contables/ERP en segundos.">
+              <span class="sub-num">2.1</span>
+              <div class="sub-info">
+                <h4>Conciliación Bancaria Automática</h4>
+                <p>Cruce masivo de extractos y facturación.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-cobranzas.mp4', '2.1 Conciliación Bancaria Automática')">▶ Ver Demo</button>
+            </div>
+
+            <div class="submodule-card" data-video="assets/demo-cobranzas-2.mp4" data-title="2.2 Gestión & Recordatorios de Cobranza Preventiva" data-desc="Envío automatizado de estados de cuenta y alertas multi-canal previo al vencimiento.">
+              <span class="sub-num">2.2</span>
+              <div class="sub-info">
+                <h4>Gestión & Recordatorios de Cobranza</h4>
+                <p>Automatización de notificaciones a clientes.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-cobranzas-2.mp4', '2.2 Gestión de Cobranza Preventiva')">▶ Ver Demo</button>
+            </div>
+          </div>
+
+          <div class="desktop-video-player desktop-only">
+            <div class="player-wrapper">
+              <h4 class="desktopVideoTitle">2.1 Motor Bot de Conciliación Bancaria Automatic</h4>
+              <video class="mainDesktopVideo" controls>
+                <source class="desktopVideoSource" src="assets/demo-cobranzas.mp4" type="video/mp4">
+              </video>
+              <p class="desktopVideoDesc">Cruce inteligente entre extractos bancarios y registros contables/ERP en segundos.</p>
+              <a href="#contacto" class="btn btn-primary btn-sm">Solicitar Diagnóstico de este Submódulo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL MÓDULO 3 -->
+      <div class="module-content-panel" id="mod-3">
+        <div class="module-intro">
+          <h3>Módulo 3: Cadena de Suministros, Viáticos & Control Logístico</h3>
+          <p><strong>❓ El Problema:</strong> Fugas financieras en rendiciones de viáticos, peajes y control de combustible.</p>
+          <p><strong>💡 Nuestra Solución:</strong> Verificación automática de comprobantes con la SUNAT/ERP y trazabilidad de flota.</p>
+        </div>
+
+        <div class="submodules-container">
+          <div class="submodules-list">
+            <div class="submodule-card active" data-video="assets/demo-logistica.mp4" data-title="3.1 Control & Rendición Automática de Viáticos" data-desc="Lectura con IA de tickets/facturas de viáticos con validación tributaria inmediata.">
+              <span class="sub-num">3.1</span>
+              <div class="sub-info">
+                <h4>Rendición Automática de Viáticos</h4>
+                <p>Extracción e ingesta inteligente de comprobantes.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-logistica.mp4', '3.1 Rendición de Viáticos')">▶ Ver Demo</button>
+            </div>
+
+            <div class="submodule-card" data-video="assets/demo-combustible.mp4" data-title="3.2 Auditoría de Combustible & Control de Peajes" data-desc="Auditoría cruzada de vales de consumo vs. kilometraje/GPS registrado.">
+              <span class="sub-num">3.2</span>
+              <div class="sub-info">
+                <h4>Auditoría de Combustible & Peajes</h4>
+                <p>Detección de desviaciones y sobrecostos en ruta.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-combustible.mp4', '3.2 Auditoría de Combustible')">▶ Ver Demo</button>
+            </div>
+          </div>
+
+          <div class="desktop-video-player desktop-only">
+            <div class="player-wrapper">
+              <h4 class="desktopVideoTitle">3.1 Control & Rendición Automática de Viáticos</h4>
+              <video class="mainDesktopVideo" controls>
+                <source class="desktopVideoSource" src="assets/demo-logistica.mp4" type="video/mp4">
+              </video>
+              <p class="desktopVideoDesc">Lectura con IA de tickets/facturas de viáticos con validación tributaria inmediata.</p>
+              <a href="#contacto" class="btn btn-primary btn-sm">Solicitar Diagnóstico de este Submódulo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL MÓDULO 4 -->
+      <div class="module-content-panel" id="mod-4">
+        <div class="module-intro">
+          <h3>Módulo 4: Integración de Sistemas, APIs & Arquitectura de Software</h3>
+          <p><strong>❓ El Problema:</strong> Sistemas aislados (ERP, CRM, Excel) que requieren tipeo manual repetitivo.</p>
+          <p><strong>💡 Nuestra Solución:</strong> Conectores customizados y flujos con webhooks/APIs para sincronización en tiempo real.</p>
+        </div>
+
+        <div class="submodules-container">
+          <div class="submodules-list">
+            <div class="submodule-card active" data-video="assets/demo-apis.mp4" data-title="4.1 Conectores ERP & Sincronización Multiorigen" data-desc="Integración fluida entre ERPs legacy (Odoo, SAP, etc.) y plataformas web.">
+              <span class="sub-num">4.1</span>
+              <div class="sub-info">
+                <h4>Conectores ERP & Sincronización</h4>
+                <p>Integración de bases de datos y sistemas dispersos.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-apis.mp4', '4.1 Conectores ERP')">▶ Ver Demo</button>
+            </div>
+
+            <div class="submodule-card" data-video="assets/demo-bots.mp4" data-title="4.2 Bots Operativos en Telegram / WhatsApp" data-desc="Asistentes automatizados para consulta de stock, aprobación de compras e ingesta de datos.">
+              <span class="sub-num">4.2</span>
+              <div class="sub-info">
+                <h4>Bots Operativos (Telegram/WhatsApp)</h4>
+                <p>Notificaciones e ingesta vía mensajería.</p>
+              </div>
+              <button class="btn-play-mobile mobile-only" onclick="openVideoModal('assets/demo-bots.mp4', '4.2 Bots Operativos')">▶ Ver Demo</button>
+            </div>
+          </div>
+
+          <div class="desktop-video-player desktop-only">
+            <div class="player-wrapper">
+              <h4 class="desktopVideoTitle">4.1 Conectores ERP & Sincronización Multiorigen</h4>
+              <video class="mainDesktopVideo" controls>
+                <source class="desktopVideoSource" src="assets/demo-apis.mp4" type="video/mp4">
+              </video>
+              <p class="desktopVideoDesc">Integración fluida entre ERPs legacy (Odoo, SAP, etc.) y plataformas web.</p>
+              <a href="#contacto" class="btn btn-primary btn-sm">Solicitar Diagnóstico de este Submódulo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+
 
   <!-- VENTANA FLOTANTE / MODAL PARA CELULARES (MOBILE ONLY) -->
   <div class="video-modal-overlay" id="videoModal">

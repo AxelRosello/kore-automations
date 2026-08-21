@@ -1124,3 +1124,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Control de visibilidad de los paneles principales */
+.module-content-panel {
+  display: none;
+}
+
+.module-content-panel.active {
+  display: block;
+}

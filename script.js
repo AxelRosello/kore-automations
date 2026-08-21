@@ -1,137 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. CAMBIO DE MÓDULOS PRINCIPALES (PESTAÑAS SUPERIORES)
+  const mainTabs = document.querySelectorAll('.main-tab-btn');
+  const modulePanels = document.querySelectorAll('.module-content-panel');
 
-  // ==========================================
-  // 1. GESTIÓN DE PANELES Y TABS (MÓDULOS)
-  // ==========================================
-  const solutionButtons = document.querySelectorAll('.solution-btn');
-  const solutionPanels = document.querySelectorAll('.solution-panel');
-  const dropdownLinks = document.querySelectorAll('.dropdown-item.solution-link');
+  mainTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetModule = tab.getAttribute('data-module');
 
-  // Función reutilizable para activar un módulo específico
-  function activateModule(targetId) {
-    // Desactivar todos los botones laterales y paneles
-    solutionButtons.forEach(btn => btn.classList.remove('active'));
-    solutionPanels.forEach(panel => panel.classList.remove('active'));
+      // Remover activo de las pestañas principales
+      mainTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
 
-    // Activar el botón lateral correspondiente
-    const targetBtn = document.querySelector(`.solution-btn[data-target="${targetId}"]`);
-    if (targetBtn) {
-      targetBtn.classList.add('active');
-    }
-
-    // Activar el panel objetivo
-    const targetPanel = document.getElementById(targetId);
-    if (targetPanel) {
-      targetPanel.classList.add('active');
-    }
-  }
-
-  // Listener para botones laterales de módulos
-  solutionButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-target');
-      activateModule(targetId);
+      // Ocultar todos los paneles y mostrar el seleccionado
+      modulePanels.forEach(panel => {
+        if (panel.id === targetModule) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
     });
   });
 
+  // 2. CAMBIO DE SUBMÓDULOS Y VIDEOS EN PC
+  modulePanels.forEach(panel => {
+    const submoduleCards = panel.querySelectorAll('.submodule-card');
+    const mainVideo = panel.querySelector('.mainDesktopVideo');
+    const videoSource = panel.querySelector('.desktopVideoSource');
+    const videoTitle = panel.querySelector('.desktopVideoTitle');
+    const videoDesc = panel.querySelector('.desktopVideoDesc');
 
-  // ==========================================
-  // 2. MENÚ DESPLEGABLE DE MÓDULOS (HEADER)
-  // ==========================================
-  const modulosBtn = document.getElementById('modulosDropdownBtn');
-  const modulosContent = document.getElementById('modulosDropdownContent');
+    submoduleCards.forEach(card => {
+      card.addEventListener('click', () => {
+        submoduleCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
 
-  if (modulosBtn && modulosContent) {
-    // Abrir / Cerrar al hacer clic en el botón
-    modulosBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isVisible = modulosContent.style.display === 'block';
-      modulosContent.style.display = isVisible ? 'none' : 'block';
-    });
+        const newVideo = card.getAttribute('data-video');
+        const newTitle = card.getAttribute('data-title');
+        const newDesc = card.getAttribute('data-desc');
 
-    // Cerrar el menú desplegable al hacer clic fuera
-    document.addEventListener('click', () => {
-      modulosContent.style.display = 'none';
-    });
-
-    // Cambiar de tab y cerrar menú al hacer clic en una opción del desplegable
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const targetId = link.getAttribute('data-target');
-        activateModule(targetId);
-        modulosContent.style.display = 'none';
+        if (mainVideo && videoSource) {
+          videoSource.src = newVideo;
+          if (videoTitle) videoTitle.textContent = newTitle;
+          if (videoDesc) videoDesc.textContent = newDesc;
+          mainVideo.load();
+        }
       });
-    });
-  }
-
-
-  // ==========================================
-  // 3. MENÚ HAMBURGUESA RESPONSIVE (MÓVILES)
-  // ==========================================
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Cerrar el menú al hacer clic en cualquier enlace de navegación
-    document.querySelectorAll('.nav-link, .nav-btn').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
-  }
-
-
-  // ==========================================
-  // 4. ENVÍO DEL FORMULARIO DE CONTACTO
-  // ==========================================
-  const contactForm = document.getElementById('contactForm');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      
-      alert(`¡Gracias, ${name}! Hemos recibido tus datos. El equipo de Kore Automations se pondrá en contacto contigo a la brevedad.`);
-      
-      contactForm.reset();
-    });
-  }
-
-  // LÓGICA DE SUBMÓDULOS E INTERACTIVIDAD DE VIDEO
-document.addEventListener('DOMContentLoaded', () => {
-  const submoduleCards = document.querySelectorAll('.submodule-card');
-  const mainVideo = document.getElementById('mainDesktopVideo');
-  const videoSource = document.getElementById('desktopVideoSource');
-  const videoTitle = document.getElementById('desktopVideoTitle');
-  const videoDesc = document.getElementById('desktopVideoDesc');
-
-  submoduleCards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Remover activo de otros submódulos
-      submoduleCards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-
-      // Actualizar reproductor en PC
-      const newVideo = card.getAttribute('data-video');
-      const newTitle = card.getAttribute('data-title');
-      const newDesc = card.getAttribute('data-desc');
-
-      if (mainVideo && videoSource) {
-        videoSource.src = newVideo;
-        videoTitle.textContent = newTitle;
-        videoDesc.textContent = newDesc;
-        mainVideo.load();
-      }
     });
   });
 });
 
-// FUNCIONES PARA VENTANA FLOTANTE EN MÓVIL (MODAL)
+// 3. FUNCIONALIDAD DEL MODAL DE VIDEO EN MÓVIL
 function openVideoModal(videoSrc, title) {
   const modal = document.getElementById('videoModal');
   const modalPlayer = document.getElementById('modalVideoPlayer');
@@ -140,7 +59,7 @@ function openVideoModal(videoSrc, title) {
 
   if (modal && modalPlayer) {
     modalSource.src = videoSrc;
-    modalTitle.textContent = title;
+    if (modalTitle) modalTitle.textContent = title;
     modalPlayer.load();
     modal.style.display = 'flex';
   }
@@ -156,5 +75,3 @@ function closeVideoModal() {
 }
 
 document.getElementById('closeModalBtn')?.addEventListener('click', closeVideoModal);
-
-});
