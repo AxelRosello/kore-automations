@@ -925,3 +925,50 @@ body {
     margin: 15px 0;
   }
 }
+
+/* --- ORDENAR MÓDULOS EN MENÚ MÓVIL (UNO DEBAJO DEL OTRO) --- */
+@media (max-width: 768px) {
+  
+  /* Contenedor principal de módulos en móvil */
+  .mobile-modulos-group {
+    display: flex;
+    flex-direction: column; /* Hace que se pongan en columna (uno sobre otro) */
+    align-items: center;    /* Centra el texto alineado con el resto del menú */
+    gap: 8px;              /* Espacio vertical entre cada módulo */
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .mobile-section-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  /* Cada enlace de módulo como un bloque individual */
+  .mobile-modulos-group .nav-link {
+    display: block !important; /* Fuerza a que ocupe su propia línea */
+    width: 100%;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .mobile-modulos-group .nav-link:hover {
+    color: #38bdf8;
+  }
+
+  .mobile-divider {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 15px auto;
+  }
+}
