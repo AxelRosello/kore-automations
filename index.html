@@ -15,53 +15,66 @@
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR CON BOTÓN DE 3 RAYAS JUNTO AL LOGO -->
-  <header class="header">
-    <div class="container nav-container">
-      <div class="brand-group" style="display: flex; align-items: center; gap: 15px;">
-        <a href="#" class="logo">
-          <img src="LOGO.jpg" alt="Kore Automations Logo" class="logo-img">
-        </a>
 
-        <!-- MENÚ DESPLEGABLE DE MÓDULOS EN LA CABECERA -->
-        <div class="dropdown-modulos" style="position: relative;">
-          <button class="btn-modulos-toggle" id="modulosDropdownBtn" aria-label="Abrir Módulos" style="display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600;">
-            <span class="hamburger-icon">☰</span>
-            <span class="btn-text">Módulos</span>
-          </button>
-          
-          <div class="dropdown-menu-content" id="modulosDropdownContent" style="display: none; position: absolute; top: 120%; left: 0; width: 320px; background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000;">
-            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-1" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <strong style="color: #fff; display: block;">Módulo 1:</strong> Gestión de Activos Críticos & Operaciones Mineras
-            </a>
-            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-2" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <strong style="color: #fff; display: block;">Módulo 2:</strong> Motor de Conciliación, Finanzas & Cobranzas Masivas
-            </a>
-            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-3" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <strong style="color: #fff; display: block;">Módulo 3:</strong> Cadena de Suministros, Viáticos & Control Logístico
-            </a>
-            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-4" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none;">
-              <strong style="color: #fff; display: block;">Módulo 4:</strong> Integración de Sistemas, APIs & Arquitectura
-            </a>
-          </div>
+
+
+  <header class="header">
+  <div class="container nav-container">
+    <div class="brand-group" style="display: flex; align-items: center; gap: 15px;">
+      <a href="#" class="logo">
+        <img src="LOGO.jpg" alt="Kore Automations Logo" class="logo-img">
+      </a>
+
+      <!-- Menú desplegable de Módulos (SOLO VISIBLE EN PC) -->
+      <div class="dropdown-modulos desktop-only" style="position: relative;">
+        <button class="btn-modulos-toggle" id="modulosDropdownBtn" aria-label="Abrir Módulos">
+          <span class="hamburger-icon">☰</span>
+          <span class="btn-text">Módulos</span>
+        </button>
+        
+        <div class="dropdown-menu-content" id="modulosDropdownContent">
+          <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-1"><strong>Módulo 1:</strong> Gestión de Activos Críticos & Operaciones Mineras</a>
+          <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-2"><strong>Módulo 2:</strong> Motor de Conciliación, Finanzas & Cobranzas Masivas</a>
+          <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-3"><strong>Módulo 3:</strong> Cadena de Suministros, Viáticos & Control Logístico</a>
+          <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-4"><strong>Módulo 4:</strong> Integración de Sistemas, APIs & Arquitectura</a>
         </div>
       </div>
-
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#soluciones" class="nav-link">Soluciones</a>
-        <a href="#problematica" class="nav-link">Beneficios</a>
-        <a href="#metodologia" class="nav-link">Metodología</a>
-        <a href="#casos-de-exito" class="nav-link">Casos de Éxito</a>
-        <a href="#contacto" class="btn btn-secondary nav-btn">Contacto</a>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </header>
+
+    <!-- Navegación Principal (Hamburguesa en Móvil) -->
+    <nav class="nav-menu" id="nav-menu">
+      <!-- Módulos visibles dentro del menú desplegable móvil -->
+      <div class="mobile-only mobile-modulos-group">
+        <span class="mobile-section-title">MÓDULOS DE SOLUCIONES</span>
+        <a href="#soluciones" class="nav-link solution-link" data-target="modulo-1">• Módulo 1: Activos Críticos & Mina</a>
+        <a href="#soluciones" class="nav-link solution-link" data-target="modulo-2">• Módulo 2: Conciliación & Finanzas</a>
+        <a href="#soluciones" class="nav-link solution-link" data-target="modulo-3">• Módulo 3: Cadena de Suministros</a>
+        <a href="#soluciones" class="nav-link solution-link" data-target="modulo-4">• Módulo 4: Integración & APIs</a>
+        <hr class="mobile-divider">
+      </div>
+
+      <a href="#soluciones" class="nav-link">Soluciones</a>
+      <a href="#problematica" class="nav-link">Beneficios</a>
+      <a href="#metodologia" class="nav-link">Metodología</a>
+      <a href="#casos-de-exito" class="nav-link">Casos de Éxito</a>
+      <a href="#contacto" class="btn btn-secondary nav-btn">Contacto</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
 
   <!-- HERO SECTION -->
   <section class="hero">
