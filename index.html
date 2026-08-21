@@ -15,12 +15,37 @@
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER / NAVBAR CON BOTÓN DE 3 RAYAS JUNTO AL LOGO -->
   <header class="header">
     <div class="container nav-container">
-      <a href="#" class="logo">
-        <img src="LOGO.jpg" alt="Kore Automations Logo" class="logo-img">
-      </a>
+      <div class="brand-group" style="display: flex; align-items: center; gap: 15px;">
+        <a href="#" class="logo">
+          <img src="LOGO.jpg" alt="Kore Automations Logo" class="logo-img">
+        </a>
+
+        <!-- MENÚ DESPLEGABLE DE MÓDULOS EN LA CABECERA -->
+        <div class="dropdown-modulos" style="position: relative;">
+          <button class="btn-modulos-toggle" id="modulosDropdownBtn" aria-label="Abrir Módulos" style="display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600;">
+            <span class="hamburger-icon">☰</span>
+            <span class="btn-text">Módulos</span>
+          </button>
+          
+          <div class="dropdown-menu-content" id="modulosDropdownContent" style="display: none; position: absolute; top: 120%; left: 0; width: 320px; background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1000;">
+            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-1" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <strong style="color: #fff; display: block;">Módulo 1:</strong> Gestión de Activos Críticos & Operaciones Mineras
+            </a>
+            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-2" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <strong style="color: #fff; display: block;">Módulo 2:</strong> Motor de Conciliación, Finanzas & Cobranzas Masivas
+            </a>
+            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-3" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <strong style="color: #fff; display: block;">Módulo 3:</strong> Cadena de Suministros, Viáticos & Control Logístico
+            </a>
+            <a href="#soluciones" class="dropdown-item solution-link" data-target="modulo-4" style="display: block; padding: 12px 16px; color: #cbd5e1; text-decoration: none;">
+              <strong style="color: #fff; display: block;">Módulo 4:</strong> Integración de Sistemas, APIs & Arquitectura
+            </a>
+          </div>
+        </div>
+      </div>
 
       <nav class="nav-menu" id="nav-menu">
         <a href="#soluciones" class="nav-link">Soluciones</a>
@@ -98,7 +123,7 @@
       </div>
 
       <div class="solutions-wrapper">
-        <!-- Lista de Selección de Módulos (Botones) -->
+        <!-- Selector Lateral Limpio de Módulos -->
         <div class="solutions-list">
           
           <button class="solution-btn" data-target="modulo-1">
